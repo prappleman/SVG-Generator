@@ -13,24 +13,23 @@ This application provides users with a straightforward and interactive platform 
 
 ## Features
 User-Friendly Interface:
-
-    Intuitive prompts guide users through the process of entering a logo title and selecting a shape, ensuring a seamless experience.
+* Intuitive prompts guide users through the process of entering a logo title and selecting a shape, ensuring a seamless experience.
 
 Text Color Customization:
 
-    Users can choose text colors using either common color names or hexadecimal values, providing flexibility and personalization.
+* Users can choose text colors using either common color names or hexadecimal values, providing flexibility and personalization.
 
 Dynamic Text Size Adjustment:
 
-    The application automatically adjusts the text size to fit into the selected shape, preventing oversizing and maintaining a visually appealing logo.
+* The application automatically adjusts the text size to fit into the selected shape, preventing oversizing and maintaining a visually appealing logo.
 
 SVG Logo Generation:
 
-    Upon collecting all user input, the application dynamically generates an SVG logo incorporating the specified title, shape, and color preferences.
+* Upon collecting all user input, the application dynamically generates an SVG logo incorporating the specified title, shape, and color preferences.
 
 Efficient and Streamlined Process:
 
-    The application streamlines the logo creation process, offering a clean and efficient user experience from input collection to logo generation.
+* The application streamlines the logo creation process, offering a clean and efficient user experience from input collection to logo generation.
 
 ## Questions
 For questions about this project, contact [prappleman](https://github.com/prappleman) via email at parker.rappleye1@gmail.com.
