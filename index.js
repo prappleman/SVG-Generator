@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+//questions
 const questions = [
     {
         type: 'input',
@@ -25,8 +26,8 @@ const questions = [
     }
 ];
 
+//shapes
 function generateSvg(answers) {
-    // Determine shape based on user input
     let shapeElement;
     switch (answers.shape.toLowerCase()) {
         case 'circle':
@@ -43,19 +44,18 @@ function generateSvg(answers) {
             return;
     }
 
-    // Calculate the font size to fit within the shape
     const fontSize = Math.min(300, 250 / answers.text.length);
 
-    // Create the SVG content
+    //svg outline
     const svgContent = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">\n${shapeElement}\n<text x="50%" y="50%"  font-size="${fontSize}" dominant-baseline="middle" text-anchor="middle" fill="${answers.textcolor}">${answers.text}</text>\n</svg>`;
 
-    // Save the SVG content to a file
+    //adds outline and info to file
     fs.writeFileSync('output.svg', svgContent);
 
     console.log('SVG file created successfully!');
 }
 
-
+//starts app
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {
