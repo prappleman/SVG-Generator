@@ -33,24 +33,28 @@ function generateSvg(answers) {
             shapeElement = `<circle cx="150" cy="100" r="80" fill="${answers.shapecolor}" />\n`;
             break;
         case 'triangle':
-            shapeElement = `<polygon points="10,190 100,10 190,190" fill="${answers.shapecolor}" />\n`;
+            shapeElement = `<polygon points="50,175 150,10 250,175" fill="${answers.shapecolor}" />\n`;
             break;
         case 'square':
-            shapeElement = `<rect x="50" y="50" width="100" height="100" fill="${answers.shapecolor}" />\n`;
+            shapeElement = `<rect x="100" y="50" width="100" height="100" fill="${answers.shapecolor}" />\n`;
             break;
         default:
             console.log('Invalid shape choice');
             return;
     }
 
+    // Calculate the font size to fit within the shape
+    const fontSize = Math.min(250, 200 / answers.text.length);
+
     // Create the SVG content
-    const svgContent = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">\n${shapeElement}\n<text x="150" y="125" font-size="60" text-anchor="middle" fill="${answers.textcolor}">${answers.text}</text>\n</svg>`;
+    const svgContent = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">\n${shapeElement}\n<text x="50%" y="50%"  font-size="${fontSize}" dominant-baseline="middle" text-anchor="middle" fill="${answers.textcolor}">${answers.text}</text>\n</svg>`;
 
     // Save the SVG content to a file
     fs.writeFileSync('output.svg', svgContent);
 
     console.log('SVG file created successfully!');
 }
+
 
 function init() {
     inquirer.prompt(questions)
