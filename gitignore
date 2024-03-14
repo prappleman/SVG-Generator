@@ -1,2 +1,3 @@
+// deleted node modules and added them again after the git ignore was in place
 node_modules
 output.svg
