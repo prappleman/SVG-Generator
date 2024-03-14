@@ -2,6 +2,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "inquirer": "^8.2.4",
+    "requirer": "^0.0.4",
     "svg.js": "^2.7.1"
   },
   "devDependencies": {
