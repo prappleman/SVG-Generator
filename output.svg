@@ -1,5 +1,5 @@
 <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-<circle cx="150" cy="100" r="80" fill="pink" />
+<polygon points="50,175 150,10 250,175" fill="purple" />
 
-<text x="50%" y="50%"  font-size="5.555555555555555" dominant-baseline="middle" text-anchor="middle" fill="purple">this app does a great job at making svg logos</text>
+<text x="50%" y="50%"  font-size="83.33333333333333" dominant-baseline="middle" text-anchor="middle" fill="white">two</text>
 </svg>
