@@ -11,6 +11,10 @@ This application provides users with a straightforward and interactive platform 
 ## Usage
 <img src="assets/svg_example.png" title="SVG Example">
 
+## Demo
+
+Watch a demonstration of the project [here](https://youtu.be/EfSmncspkCc).
+
 ## Features
 User-Friendly Interface:
 * Intuitive prompts guide users through the process of entering a logo title and selecting a shape, ensuring a seamless experience.
