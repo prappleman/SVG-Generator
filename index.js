@@ -28,6 +28,24 @@ const questions = [
 
 //shapes
 function generateSvg(answers) {
+    // Input validation
+    if (answers.text.length > 3) {
+        throw new Error('Text must be up to three characters.');
+    }
+
+    if (!answers.textcolor.match(/^#[0-9a-fA-F]{6}$/) && !['red', 'green', 'blue'].includes(answers.textcolor.toLowerCase())) {
+        throw new Error('Invalid text color.');
+    }
+
+    const shapes = ['circle', 'triangle', 'square'];
+    if (!shapes.includes(answers.shape.toLowerCase())) {
+        throw new Error('Invalid shape choice.');
+    }
+
+    if (!answers.shapecolor.match(/^#[0-9a-fA-F]{6}$/) && !['red', 'green', 'blue'].includes(answers.shapecolor.toLowerCase())) {
+        throw new Error('Invalid shape color.');
+    }
+
     let shapeElement;
     switch (answers.shape.toLowerCase()) {
         case 'circle':
@@ -40,8 +58,7 @@ function generateSvg(answers) {
             shapeElement = `<rect x="100" y="50" width="100" height="100" fill="${answers.shapecolor}" />\n`;
             break;
         default:
-            console.log('Invalid shape choice');
-            return;
+            throw new Error('Invalid shape choice.');
     }
 
     const fontSize = Math.min(300, 250 / answers.text.length);
@@ -50,10 +67,15 @@ function generateSvg(answers) {
     const svgContent = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">\n${shapeElement}\n<text x="50%" y="50%"  font-size="${fontSize}" dominant-baseline="middle" text-anchor="middle" fill="${answers.textcolor}">${answers.text}</text>\n</svg>`;
 
     //adds outline and info to file
-    fs.writeFileSync('output.svg', svgContent);
+    fs.writeFileSync('logo.svg', svgContent);
 
     console.log('SVG file created successfully!');
+    return svgContent;
 }
+
+module.exports = {
+    generateSvg: generateSvg
+};
 
 //starts app
 function init() {
