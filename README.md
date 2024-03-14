@@ -1,4 +1,4 @@
-# svg generator
+# SVG Generator
 
 ## Overview
 This application provides users with a straightforward and interactive platform for creating custom logos. Users are prompted to input a logo title and select a shape of their choice. The application facilitates a personalized experience by allowing users to specify text colors using either standard color names or hexadecimal values. An additional standout feature ensures that the text is intelligently fitted into the chosen shape, preventing it from appearing oversized and maintaining a clean and professional aesthetic.
