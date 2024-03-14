@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.4",
     "svg.js": "^2.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
